@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/iconfont.css" /> 
+		<link rel="stylesheet" href="css/main.css" />
+		<style >
+			html{
+				background:lightsteelblue;
+			}
+			.baiyun{
+				background: lightsteelblue;
+				height: 50px;
+				margin-top: 20px;
+				margin-bottom: -60px;
+			}
+			.baiyun2{
+				background: lightsteelblue;
+				position: relative;
+				top: 20px;
+			}
+			.ll{
+				background: lightsteelblue;
+				width: 100%;
+			}
+			.login{
+				box-shadow: 10px 10px 1px silver;
+				background: lavenderblush;
+				border-radius: 26%;
+				width: 94%;
+				margin-left: 3%;
+			}
+			.login input{
+				border: none;
+			}
+			.lname{
+				margin-left: 20%;
+				border-radius: 10px !important;
+				
+			}
+			.lpassword{
+				margin-top: 26px;
+				margin-left: 20%;
+				border-radius: 10px !important;
+			}
+			.login{
+				padding-bottom: 20px;
+			}
+			.login-c{
+				font-size: 40px;
+				color: darkolivegreen ;
+				position: relative;
+				left: 18%;
+				top: 4px;
+			}
+			.login-m{
+				font-size: 46px !important;
+				color: brown;
+				position: relative;
+				left:3%;
+				top: 78px;
+			}
+			.lsubmit{
+				color: olivedrab !important;
+				background: white !important;
+				margin-left:34% ;
+				border-radius:  50% !important;
+				display: block;
+			}
+			.ear{
+				
+				height: 100px;
+				width: 100%;
+				margin-top: 30%;
+			}
+			.ear-l,.ear-r{
+				background: lavenderblush;
+				width: 80px;
+				height: 100px;
+				background: ;
+				float: left;
+				border-radius: 70%;
+				position: relative;
+				top: 50px;
+			}
+			.ear-l{
+				margin-left: 20%;
+				margin-right: 20%;
+			}
+			.ear-l-l,.ear-r-l{
+				width: 30px;
+				height: 15px;
+				margin-left: 30%;
+				margin-top: 40%;
+				background: white;
+				border-radius: 90%;
+			}
+			.circle{
+				width: 50px;
+				height: 60px;
+				border-radius: 50%;
+				margin-left: 10%;
+			}
+			.circle2{
+				width: 60px;
+				height:80px;
+				border-radius: 50%;
+				margin-left: -20px;
+			}
+			.circle3{
+				width: 80px;
+				height:100px;
+				border-radius: 50%;
+				margin-left: -30px;
+			}
+			.circle,.circle2,.circle3{
+				background: white;
+				float: left;
+			}
+		</style>
+	</head>
+
+	<body>		
+		<div class="ll">
+			<div class="baiyun">
+				<div class="circle"></div>
+				<div class="circle3"></div>
+				<div class="circle2"></div>
+			</div>
+			<div class="baiyun2">
+				<div class="circle"></div>
+				<div class="circle3"></div>
+				<div class="circle2"></div>
+			</div>
+			<div class="ear">
+				<div class="ear-l">
+					<div class="ear-l-l"></div>
+				</div>
+				<div class="ear-r">
+					<div class="ear-r-l"></div>
+				</div>
+			</div>
+			<div class="login">
+				<span class="mui-icon iconfont icon-xiaocao login-c"></span>
+				<span class="mui-icon iconfont icon-caomei login-m"></span>
+				<input type="text" placeholder="用户名" class="lname" style="width: 60%; height: 34px;"/>
+				<input type="password" placeholder="密码"  class="lpassword" style="width: 60%; height: 34px;"/>
+				<input type="submit"  placeholder="提交" class="lsubmit" style=" width: 30%;"/>
+		    </div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			//沉浸式
+//	      	mui.plusReady(function(){
+//					plus.navigator.setStatusBarBackground("#B0C4DE");
+//				})
+            var lsumbit=document.getElementsByClassName('lsubmit')[0];
+            var lname=document.getElementsByClassName('lname')[0];
+            var lpassword=document.getElementsByClassName('lpassword')[0]
+            lsumbit.addEventListener('tap',function(){
+            	if(lname.value==''||lpassword.value==''){
+            		alert('请输入完整信息')
+            	}else{
+//          		plus.webview.create('inchild.html')
+            		plus.webview.create('index.html','inclild').show('zoom-fade-out');
+					}
+            	}
+            )
+		</script>
+	</body>
+</html>

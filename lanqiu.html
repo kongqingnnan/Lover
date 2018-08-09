@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/baskb.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<style>
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav " style="background: white;">
+		    <span class="mui-icon iconfont icon--xuanxiang-lanqiu"></span>
+		    <input class="sea" placeholder="qiuqiuqiuqiu"/>
+		    <span class="mui-icon iconfont icon-huifu"></span>
+		</header>
+		<div class="lanqiu">
+			<div id="lanqiu-l">
+				<a href="tj.html" class="tui">为你推荐</a>
+				<a href="bask.html">篮球</a>
+				<a href="foot.html">足球</a>
+				<a href="bask.html">羽毛球</a>
+				<a href="bask.html">乒乓球</a>
+				<a href="bask.html">排球</a>
+				<a href="bask.html">高尔夫球</a>
+				<a href="bask.html">荒野行动</a>
+				<a href="bask.html">刀塔</a>
+				<a href="bask.html">王者荣耀</a>
+				<a href="bask.html">英雄联盟</a>
+				<a href="bask.html">绝地求生</a>
+				<a href="bask.html">全军出击</a>
+				<a href="bask.html">炉石传说</a>
+				<a href="bask.html">王者荣耀</a>
+				<a href="bask.html">英雄联盟</a>
+				<a href="bask.html">绝地求生</a>
+				<a href="bask.html">全军出击</a>
+				<a href="bask.html">炉石传说</a>
+			</div>
+			<div class="lanqiu-r">
+				<div class="lanqiu-r-t">
+					<!--<img src="img/lanqiu.jpg" />-->
+					<div class="lanqiu-r-t-img"></div>
+				</div>
+				<div class="lanqiu-r-b" >
+					<h6>常用分类</h6>
+					<span class="mui-icon iconfont icon-icongolfcar"><h6>高尔夫</h6></span>
+					<span class="mui-icon iconfont icon-PingPong"><h6>乒乓球</h6></span>
+					<span class="mui-icon iconfont icon-yumaoqiu"><h6>羽毛球</h6></span>
+					<span class="mui-icon iconfont icon-zuqiu"><h6>足球</h6></span>
+					<span class="mui-icon iconfont icon-icongolfcar"><h6>高尔夫</h6></span>
+					<span class="mui-icon iconfont icon-PingPong"><h6>乒乓球</h6></span>
+					<span class="mui-icon iconfont icon-yumaoqiu"><h6>羽毛球</h6></span>
+					<span class="mui-icon iconfont icon-zuqiu"><h6>足球</h6></span>
+					<span class="mui-icon iconfont icon-icongolfcar"><h6>高尔夫</h6></span>
+					<h6>不常用分类</h6>
+					<span class="mui-icon iconfont icon-PingPong"><h6>乒乓球</h6></span>
+					<span class="mui-icon iconfont icon-yumaoqiu"><h6>羽毛球</h6></span>
+					<span class="mui-icon iconfont icon-zuqiu"><h6>足球</h6></span>
+					<span class="mui-icon iconfont icon-icongolfcar"><h6>高尔夫</h6></span>
+					<span class="mui-icon iconfont icon-PingPong"><h6>乒乓球</h6></span>
+					<span class="mui-icon iconfont icon-yumaoqiu"><h6>羽毛球</h6></span>
+					<span class="mui-icon iconfont icon-zuqiu"><h6>足球</h6></span>
+					<span class="mui-icon iconfont icon-icongolfcar"><h6>高尔夫</h6></span>
+					<span class="mui-icon iconfont icon-PingPong"><h6>乒乓球</h6></span>
+					<span class="mui-icon iconfont icon-PingPong"><h6>乒乓球</h6></span>
+					<span class="mui-icon iconfont icon-yumaoqiu"><h6>羽毛球</h6></span>
+					<span class="mui-icon iconfont icon-zuqiu"><h6>足球</h6></span>
+					<span class="mui-icon iconfont icon-icongolfcar"><h6>高尔夫</h6></span>
+					<span class="mui-icon iconfont icon-PingPong"><h6>乒乓球</h6></span>
+					<span class="mui-icon iconfont icon-yumaoqiu"><h6>羽毛球</h6></span>
+					<span class="mui-icon iconfont icon-zuqiu"><h6>足球</h6></span>
+					<span class="mui-icon iconfont icon-icongolfcar"><h6>高尔夫</h6></span>
+					<span class="mui-icon iconfont icon-PingPong"><h6>乒乓球</h6></span>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+//			mui.init()
+//			var a=document.addEventListener('tap',function(){
+//				a.className
+//			})
+			mui('#lanqiu-l').on('tap','a',function(){
+	    		for(var i=0;i<19;i++){
+	    			document.getElementById('lanqiu-l').getElementsByTagName('a')[i].id='';
+	    		}
+	    		this.id='ahover';
+	        })
+
+		</script>
+	</body>
+
+</html>

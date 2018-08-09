@@ -1,0 +1,115 @@
+
+.wtop{
+	background: white;
+	height: 86px;
+	width: 100%;
+	margin-top: 18px;
+}
+.wtop div{
+	float: left;
+}
+.wtop-l{
+	width: 26%;
+	height:70px;
+	padding: 5px;
+}
+.wtop-l img{
+	width: 90%;
+}
+.wtop-r{
+	width: 14%;
+	float: right !important;
+}
+.wtop-m{
+	padding: 12px;
+	width: 50%;
+	margin: 5px auto;
+}
+.wtop-m h6{
+	font-size: 17px;
+	color: black;
+}
+.wtop-m h5{
+	padding-top: 5px;
+	color: black;
+	font-size: 12px;
+}
+.icon-erweima{
+	font-size:24px !important;
+	color: #555555; 
+	height: 60px;
+	line-height: 90px;
+}
+.mui-pull-right {
+	font-size: 20px;
+	margin-top: 37px;
+	color: #AAAAAA;
+}
+.wmid,.wmad{
+	margin-top: 26px;
+	width: 10px;
+	background: white;
+	width: 100%;
+	padding: 5px;
+}
+.icon-xingxing{
+	font-size: 30px;
+	color: goldenrod;
+	margin-left: 3%;
+}
+.icon-xingxing span{
+	color: #333333;
+	font-size: 15px;
+	position: relative;
+	top: -5px;
+	left: 10px;
+}
+.wmad span{
+	display: block;
+	padding: 6px;
+	
+}
+.wmad span span{
+	display: inline-block;
+	font-size: 16px;
+}
+.icon-xiangce{
+	color:darkolivegreen;
+	font-size: 22px;
+}
+.icon-xiangce span,.icon-qiabao  span{
+	color:#333333 ;
+	font-size: 15px;
+	position: relative;
+	top: -2px;
+	left: 10px;
+}
+.icon-qiabao{
+	color:red;
+	font-size: 22px;
+	margin-left: 3%;
+}
+.shang{
+	border-bottom: 1px solid #DDDDDD;
+	width: 96%;
+	margin: 0 auto;
+}
+.bot{
+	border-bottom: none;
+	width: 96%;
+	margin: 0 auto;
+}
+.icon-shezhi{
+	color:#6D6D72;
+	font-size: 20px;
+	margin-left: 3%;
+	padding: 5px;
+}
+.icon-shezhi span{
+	color:#333333 ;
+	font-size: 16px;
+	position: relative;
+	top: -2px;
+	left: 14px;
+}
+

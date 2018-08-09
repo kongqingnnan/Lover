@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet"/>
+    	<link rel="stylesheet" href="css/main.css" />
+    	<link rel="stylesheet" href="css/iconfont.css" />
+	</head>
+
+	<body>
+		<!--底部导航开始-->
+		    <nav class="mui-bar mui-bar-tab" id="select" >
+		        <a class="mui-tab-item" href="inchild.html"  id='green'>
+		            <span class="mui-icon iconfont icon-yduizuji" ></span>
+		            <span class="mui-tab-label">足迹</span>
+		        </a>
+		        <a class="mui-tab-item" href="zhongcao.html">
+		            <span class="mui-icon iconfont icon-xiaocao"></span>
+		            <span class="mui-tab-label">种草</span>
+		        </a>
+		        <a class="mui-tab-item" href="we.html">
+		            <span class="mui-icon iconfont icon-gerenzhongxin"></span>
+		            <span class="mui-tab-label">我们</span>
+		        </a>
+		        <a class="mui-tab-item" href="lanqiu.html">
+		            <span class="mui-icon iconfont icon-lanqiu" ></span>
+		            <span class="mui-tab-label">篮球</span>
+		        </a>
+		        <a class="mui-tab-item" href="future.html">
+		            <span class="mui-icon iconfont icon-jihua" ></span>
+		            <span class="mui-tab-label">未来</span>
+		        </a>  
+		    </nav> 
+		    <!--底部导航结束-->
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+		    subpages:[{
+		      url:'inchild.html',//子页面HTML地址，支持本地地址和网络地址
+		      id:'inchild',//子页面标志
+		      styles:{
+		        top:'0px',//子页面顶部位置
+		        bottom:'50px',//子页面底部位置
+		      },
+		      extras:{}//额外扩展参数
+		    }]
+		  });
+		  //底部导航点击变色 批量绑定
+	     //注意：id应放在父元素里 包含所有元素 而不是a标签中
+	    	mui('#select').on('tap','a',function(){
+	    		for(var i=0;i<5;i++){
+	    			document.getElementById('select').getElementsByTagName('a')[i].id='';
+	    		}
+	    		this.id='green';
+	    	})
+	    	//mui初始化
+			mui.init();
+			var subpages = ['inchild.html', 'zhongcao.html','we.html','lanqiu.html','future.html'];
+			var subpage_style = {
+				top:'0px',
+				bottom: '50px'
+			};
+			var aniShow = {};
+			 //创建子页面，首个选项卡页面显示，其它均隐藏；
+			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				for (var i = 0; i < subpages.length; i++) {
+					var temp = {};
+					var sub = plus.webview.create(subpages[i], subpages[i], subpage_style);
+					if (i > 0) {
+						sub.hide();
+					}else{
+						temp[subpages[i]] = "true";
+						mui.extend(aniShow,temp);
+					}
+					self.append(sub);
+				}
+			});
+			 //当前激活选项
+			var activeTab = subpages[0];
+			
+			 //选项卡点击事件
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				var targetTab = this.getAttribute('href');
+				if (targetTab == activeTab) {
+					return;
+				}
+				//显示目标选项卡
+				//若为iOS平台或非首次显示，则直接显示
+				if(mui.os.ios||aniShow[targetTab]){
+					plus.webview.show(targetTab);
+				}else{
+					//否则，使用fade-in动画，且保存变量
+					var temp = {};
+					temp[targetTab] = "true";
+					mui.extend(aniShow,temp);
+					plus.webview.show(targetTab,"fade-in",300);
+				}
+				//隐藏当前;
+				plus.webview.hide(activeTab);
+				//更改当前活跃的选项卡
+				activeTab = targetTab;
+			});
+			 //自定义事件，模拟点击“首页选项卡”
+			document.addEventListener('gohome', function() {
+				var defaultTab = document.getElementById("green");
+				//模拟首页点击
+				mui.trigger(defaultTab, 'tap');
+				//切换选项卡高亮
+				var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+				if (defaultTab !== current) {
+					current.classList.remove('mui-active');
+					defaultTab.classList.add('mui-active');
+				}
+			});
+		</script>
+	</body>
+
+</html>

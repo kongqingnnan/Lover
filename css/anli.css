@@ -1,0 +1,173 @@
+html{
+	background: white;
+}
+.cao{
+	width: 100%;
+	background: white;
+	
+}
+.tb{
+	height:160px;
+	width: 100%;
+	background: white;
+	position: fixed;
+	z-index: 88;
+}
+.tb img{
+	height: 360px;
+	width: 100%;
+	border-radius: 30%;
+	margin-top: -130px;
+}
+.litmid{
+	background: white;
+	width: 96%;
+	height: 144px;
+	margin-top: 120px ;
+	margin-left: 2%;
+	border-radius:8px;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #EFEFF4;
+	box-shadow: 1px 2px 2px #DDDDDD;
+	position: fixed;
+	z-index: 99;
+	
+}
+.sec{
+	border-radius:20px;
+	border: none;
+	background:#EFEFF4 ;
+	margin-top: 2px;
+	text-align: center;
+	height: 34px;
+	line-height: 34px;
+	margin-left: 5%;
+	width: 90%;
+}
+.icon-xiaocao{
+  color: #B6B6B6;
+  position: relative;
+  left: 32%;
+  top: 28px;
+}
+.writ{
+	margin-left: 8%;
+	margin-top: 10px;
+	height: 100px;
+	float: left;
+}
+.writ2{
+	margin-left: 14%;
+	margin-top: 10px;
+	height: 100px;
+	float: left;
+}
+.icon-huifu{
+	font-size: 20px !important;
+	color: white;
+	font-weight: bolder;
+	margin-top: 9px;
+	margin-left: 7px;
+}
+.logo{
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background: lightcoral;
+}
+.words{
+	font-size: 12px;
+	color: #999999;
+	margin-left: -4px;
+}
+.green{
+	background: yellowgreen;
+}
+.blue{
+	background: lightskyblue;
+}
+.qing{
+	background: mediumaquamarine;
+}
+.anliqul{
+	width: 46%;
+	margin-left: 3%;
+	margin-top: 260px;
+	float: left;
+	border:1px solid #EFEFF4 ;
+}
+.anliqur{
+	width: 46%;
+	margin-left: 2%;
+	margin-top: 260px;
+	border:1px solid #EFEFF4 ;
+	float: left;
+}
+.top img{
+	width: 100%;
+}
+.tit h5{
+	color: #333333;
+	font-weight: bold;
+}
+.gaiyao{
+	border-bottom:1px solid #EFEFF4 ;
+}
+.gaiyao h6{
+	margin: 10px 0px 2px 0;
+	
+}
+.nr-l{
+	float: left;
+	padding-top: 4px ;
+	padding-left: 2px;
+}
+.nr-l .icon-yduizuji{
+	float: right;
+	position: relative;
+	top: 60px;
+	margin-right: 4px;
+}
+
+/*单行设置*/
+.anliqur-item .tit,.anliqul-item .tit h5{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;	
+}
+/*多行设置*/
+.anliqur-item .gaiyao h6,.anliqul-item .gaiyao h6{
+	 -webkit-line-clamp: 2;
+	 -webkit-box-orient: vertical;
+	 display: -webkit-box;
+	 text-overflow: ellipsis;
+	 overflow:hidden;	 
+}
+.touxiang img{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+.touxiang span{
+	font-size: 10px;
+	color: #6D6D72;
+	position: relative;
+	top: -5px;
+}
+.nr-r{
+	float: right;
+	margin-right: 4px;
+}
+.icon-yduizuji{
+	font-size: 16px !important;
+	color: #ACACB4;
+	position: relative;
+	top: 4px;
+}
+.icon-yduizuji span{
+	font-size: 10px;
+	position: relative;
+	top: -2px;
+	margin-left: 2px;
+}
